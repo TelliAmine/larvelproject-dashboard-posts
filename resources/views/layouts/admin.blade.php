@@ -14,9 +14,10 @@
     <title>Admin</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    
 
-    <link href="css/lib.css" rel="stylesheet">
+ 
+    <link rel="stylesheet" type="" href="{{mix('css/lib.css')}}">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -129,11 +130,11 @@
                         <a href="#"><i class="fa fa-wrench fa-fw"></i>Users<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="">All Users</a>
+                                <a href="{{route('users.index')}}">All Users</a>
                             </li>
 
                             <li>
-                                <a href="">Create User</a>
+                                <a href="{{route('users.create')}} ">Create User</a>
                             </li>
 
                         </ul>
@@ -334,10 +335,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-lg-12">
+            @include('messages')
                 <h1 class="page-header"></h1>
 
                 @yield('content')
-                Admin
+                
             </div>
             <!-- /.col-lg-12 -->
         </div>
@@ -351,7 +353,8 @@
 <!-- /#wrapper -->
 
 <!-- jQuery -->
-<script src="js/libs.js"></script>
+<script src="{{mix('js/libs.js')}}"></script>
+
 
 
 @yield('scripts')

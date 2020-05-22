@@ -12,8 +12,9 @@ const mix = require('laravel-mix');
  */
 
 mix.js('resources/js/app.js', 'public/js')
+    .js('resources/js/librarie.js', 'public/js/libs.js')
     .sass('resources/sass/app.scss', 'public/css');
 
 
 
-mix.styles('node_modules/bootstrap/dist/css/bootstrap.min.css', 'public/css/theme.css');
+mix.styles('resources/css/librarie.css', 'public/css/lib.css');
