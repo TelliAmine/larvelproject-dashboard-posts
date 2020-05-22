@@ -26,12 +26,13 @@
 
 <div class="form-group">
     {{Form::label('file',)}}
-    {{Form::file('file') }}
+    {{Form::file('photo_id') }}
 
 </div>
 <div class="form-group">
 {{Form::Label('Password')}}
-{{Form::text('password','',['class'=>'form-control','placeholder'=>'Enter text'])}}
+
+{{ Form::password('password',array('class' => 'form-control',)) }}
 
 </div>
 
