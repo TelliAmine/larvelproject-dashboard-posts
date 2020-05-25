@@ -47,7 +47,7 @@
 </div>
 
 <div>
-    {{form::submit('create user',['class'=> 'btn btn-primary'])}}
+    {{form::submit('Edit user',['class'=> 'btn btn-primary'])}}
 </div>
 
 
