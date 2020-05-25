@@ -16,7 +16,7 @@
     <!-- Bootstrap Core CSS -->
     
 
- 
+    <link rel="stylesheet" type="" href="main.css">
     <link rel="stylesheet" type="" href="{{mix('css/lib.css')}}">
 
 

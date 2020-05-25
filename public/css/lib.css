@@ -4,6 +4,18 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+#admin-page {
+    padding-top: 0px;
+}
+
+#nested-comment {
+    margin-top: 60px;
+}
+
+.comment-reply {
+    display: none;
+}
+
 body {
     padding-top: 70px;
     /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
