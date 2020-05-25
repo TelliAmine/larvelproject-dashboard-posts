@@ -7,11 +7,14 @@
   <thead>
     <tr>
       <th>id</th>
-      <th>Title</th>
-      <th>Content</th>
-      <th>user</th>
-      <th>Category</th>
       <th>Photo</th>
+      <th>Owner</th>
+      <th>Title</th>
+
+      <th>Content</th>
+     
+      <th>Category</th>
+    
 
       <th>Created</th>
       <th>Updated</th>
@@ -23,14 +26,16 @@
   <tr>
      
       <td>{{$post->id}}</td>
+      <td> <img height="50" src=" /images/{{$post->photo_id ? $post->photo->file :''}}" alt="No Post Photo"></td>
+      <td>{{$post->user->name}}</td>
       
       
       <td> <a href="{{route('posts.edit',$post->id)}}">{{$post->title}}</a></td>
       
       <td>{{$post->body}}</td>
-      <td>{{$post->user_id}}</td>
+    
       <td>{{$post->category_id}}</td>
-      <td>{{$post->photo_id}}</td>
+     
      
       <td>{{$post->created_at->diffForHumans()}}</td>
       <td>{{$post->updated_at->diffForHumans()}}</td>
