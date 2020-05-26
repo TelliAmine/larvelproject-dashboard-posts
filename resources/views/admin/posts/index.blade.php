@@ -32,7 +32,7 @@
       
       <td> <a href="{{route('posts.edit',$post->id)}}">{{$post->title}}</a></td>
       
-      <td>{{$post->body}}</td>
+      <td>{{Str::limit($post->body ,30)}}</td>
     
       <td>{{$post->category?$post->category->name:'Uncategorized' }}</td>
      
