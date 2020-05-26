@@ -4,6 +4,19 @@
 <h1> Edit Post</h1>
 
 
+<div class="row">
+  
+
+<div class="col-sm-5">
+<br>
+<br>
+<img height="400"  src="/images/{{$post->photo->file}}" class="img-responsive" src="" alt="">
+</div>
+<br>
+<div class="col-sm-7">
+  
+
+
 {!! Form::model($post ,['action' => ['AdminpostsController@update',$post->id],'method'=>'Post','enctype'=>'multipart/form-data']) !!}
 @csrf
 @method('PUT')
@@ -46,7 +59,8 @@
 <div class="form-group">
    {!! Form::submit('Delete post', ['class'=>'btn btn-danger ']) !!}
 </div>
-
+</div>
+</div>
 {!! Form::close() !!}
 
 
