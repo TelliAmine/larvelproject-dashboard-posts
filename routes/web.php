@@ -21,20 +21,24 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/', 'HomeController@index')->name('home');
-Route::get('/admin', function(){
-    return view('admin.index');
-}
-);
+Route::get('/post/{id}',['as'=>'home.post','uses'=>'AdminpostsController@post']);
+
 
 
 
 Route::group(['middleware'=>'admin'],function(){
   
+    Route::get('/admin', function(){
+        return view('admin.index');
+    }
+    );
+
     Route::resource('/admin/posts', 'AdminpostsController');
     Route::resource('/admin/users', 'AdminusersController');
     Route::resource('/admin/categories', 'AdminCategoriesController');
     Route::resource('/admin/media', 'AdminmediaController');
-    
+    Route::resource('/admin/comments', 'PostCommentsController');
+    Route::resource('/admin/comments/replies', 'CommentRepliesController');
 
     
 

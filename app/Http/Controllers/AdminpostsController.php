@@ -148,4 +148,13 @@ class AdminpostsController extends Controller
               return redirect('/admin/posts')->with('status','Post deleted');;
           }
     }
+
+
+    public function post($id)
+    {
+  $post=Post::findOrFail($id);
+
+        return view('post',compact('post'));
+          
+    }
 }
